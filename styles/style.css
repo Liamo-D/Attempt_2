@@ -8,11 +8,16 @@
   
   /* Style the header */
   .header {
-    background-color: #f1f1f1;
+    background-color: #114AB1;
     padding: 20px;
     text-align: center;
   }
-  
+
+  /* Style the main content of the website*/
+  main{
+    background-color:#6793AC;
+  }
+
   /* Create three unequal columns that floats next to each other */
   .column {
     float: left;
@@ -21,17 +26,19 @@
   
   /* Nav column */
   .column.nav {
-    width: 20%;
+    width: 10%;
+    background-color: #E4580B;
   }
   
   /* Middle column */
   .column.middle {
-    width: 55%;
+    width: 65%;
   }
 
   /* Right column */
   .column.side {
     width: 25%;
+    background-color:#E4580B;
   }
   
   /* Clear floats after the columns */
@@ -40,9 +47,17 @@
     display: table;
     clear: both;
   }
+  footer {
+    background-color:#6793AC;
+  }
+  footer p{
+    margin:0;
+    padding:1%;
+    text-align:center;
+  }
   
   /* Restricts the website to a maximum width of 1100px */
-  @media screen and (max-width: 1100px){
+  @media (min-width: 1100px){
     body {
       max-width:1100px;
       margin:auto;
