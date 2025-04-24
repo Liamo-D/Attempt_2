@@ -24,11 +24,92 @@
     padding: 10px;
   }
   
-  /* Nav column */
-  .column.nav {
+  /* Left column */
+  .column.left {
+    padding:0px;
     width: 10%;
     background-color: #E4580B;
   }
+
+  /* Positions elements in .navbar div*/
+  .navbar {
+    position: relative;
+    display:inline-block;
+  }
+
+  /* Styles the  Menu buttons*/
+  .menu{
+    background-color: #E4580B;
+    margin:0;
+    padding:15px;
+    font-size:18px;
+    color:black;
+    border:none;
+    cursor:pointer;
+  }
+ 
+  /* Styles the Menus*/
+  .link {
+    display:none;
+    position:absolute;
+    background-color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Styles the links in the Menus*/
+  .link a{
+    display:block;
+    padding:12px 16px;
+    text-decoration:none;
+    font-size:large;
+    color:black;
+    background-color:white;
+  }
+
+  /* Styles hovered links*/
+  .link a:hover{
+    background-color:#E3DAC9;
+  }
+
+  /* Feel like I can tidy this up a bit,
+      but I'm happy enough that it worls
+      for the moment*/
+
+  /*Styles Menu button when hovered*/
+  .navbar:hover .menu {
+    background-color: #bd4b0e;
+  }
+
+  /* Makes the links visible when the menu is hovered.
+     Connects the first menu (navbar a) to the first 
+     link (link a)*/
+  .navbar.a:hover .link.a {
+    display:inline-block;
+  }
+
+  /* Connects the second menu (navbar b) to the second
+     link (link b)*/
+  .navbar.b:hover .link.b {
+    display:inline-block;
+  }
+
+  /* Connects the second menu (navbar b) to the second
+     link (link b)*/
+     .navbar.c:hover .link.c {
+      display:inline-block;
+    }
+
+    /* Connects the second menu (navbar b) to the second
+     link (link b)*/
+  .navbar.d:hover .link.d {
+    display:inline-block;
+  }
+ 
+ 
+  
+
   
   /* Middle column */
   .column.middle {
