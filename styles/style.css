@@ -4,6 +4,7 @@
   
   body {
     margin: 0;
+    background-color:#80401e;
   }
   
   /* Style the header */
@@ -233,6 +234,8 @@
     body {
        max-width:1200px;
        margin:auto;
+       background-color:#80401e;
+       border: 1px solid #000000;
     }
   }
 
