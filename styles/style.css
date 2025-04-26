@@ -13,6 +13,11 @@
     text-align: center;
   }
 
+  .header a {
+    text-decoration:none;
+    color:black;
+  }
+
   /* Style the main content of the website*/
   main{
     background-color:#6793AC;
@@ -74,7 +79,7 @@
   }
 
   /* Feel like I can tidy this up a bit,
-      but I'm happy enough that it worls
+      but I'm happy enough that it works
       for the moment*/
 
   /*Styles Menu button when hovered*/
@@ -95,14 +100,14 @@
     display:inline-block;
   }
 
-  /* Connects the second menu (navbar b) to the second
-     link (link b)*/
+  /* Connects the third menu (navbar c) to the second
+     link (link c)*/
      .navbar.c:hover .link.c {
       display:inline-block;
     }
 
-    /* Connects the second menu (navbar b) to the second
-     link (link b)*/
+    /* Connects the fourth menu (navbar d) to the second
+     link (link d)*/
   .navbar.d:hover .link.d {
     display:inline-block;
   }
@@ -117,7 +122,7 @@
   }
 
   /* Right column */
-  .column.side {
+  .column.right {
     width: 25%;
     background-color:#E4580B;
   }
@@ -137,17 +142,113 @@
     text-align:center;
   }
   
-  /* Restricts the website to a maximum width of 1100px */
-  @media (min-width: 1100px){
-    body {
-      max-width:1100px;
-      margin:auto;
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  /* Styles the viewport (screen) whem the width is less than 600px */
+  @media screen and (max-width: 600px) {
+    /*I want to try make this display:none for the menu links, and add
+    a button to display it when it's pressed for small screens.
+    I think this will involve javaScript*/
+    .column.left, .column.middle, .column.right {
+      width: 100%;
+    }
+    .navbar.a:hover .link.a {
+      display:block;
+    }
+    .navbar.b:hover .link.b {
+      display:block;
+    }
+       .navbar.c:hover .link.c {
+        display:block;
+      }
+    .navbar.d:hover .link.d {
+      display:block;
     }
   }
 
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
+  /* Styles the screen when the width is between 600 and 768px*/
+  @media (min-width: 600px) and (max-width: 768px) {
+    .column.left, .column.middle, .column.right {
       width: 100%;
     }
+    /* Similar to the last one, I want to try and make this display the 
+    dropdown menu when the button is pressed, and hide it when it's not*/
+    /* I think this will involve javaScript*/
+    /* I have just discovered that CSS does this by default when using touchscreen
+       instead of a cursor, so I am quite delighted*/
+    .navbar.a:hover .link.a {
+      display:block;
+    }
+    .navbar.b:hover .link.b {
+      display:block;
+    }
+       .navbar.c:hover .link.c {
+        display:block;
+      }
+    .navbar.d:hover .link.d {
+      display:block;
+    }
   }
+
+  /* Styles the screen when the width is between 768 and 992px*/
+  @media (min-width: 768px) and (max-width: 992px) {
+    .column.left{
+      width:100%;
+    }
+    .navbar.a:hover .link.a {
+      display:block;
+    }
+    .navbar.b:hover .link.b {
+      display:block;
+    }
+       .navbar.c:hover .link.c {
+        display:block;
+      }
+    .navbar.d:hover .link.d {
+      display:block;
+    }
+    .column.middle{
+      width:75%;
+    }
+    .column.right{
+      width:25%;
+    }
+    
+  }
+
+  /* Styles the screen when the width is over 992px*/
+  @media (min-width: 992px){
+    .navbar{
+      width:100%;
+    }
+    .menu{
+      width:100%;
+    }
+  }
+
+  /* Styles the screen when the width is over 1200px*/
+  /* Restricts the website to a maximum width of 1200px */
+  @media (min-width: 1200px){
+    body {
+       max-width:1200px;
+       margin:auto;
+    }
+  }
+
+/*
+   Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+
+ Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+ Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...}
+
+ Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+
+ Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}
+*/
