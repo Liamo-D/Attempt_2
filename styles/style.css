@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
   }
@@ -24,7 +25,7 @@
     background-color:#6793AC;
   }
 
-  /* Create three unequal columns that floats next to each other */
+  /* Create three unequal columns that float next to each other */
   .column {
     float: left;
     padding: 10px;
@@ -84,32 +85,42 @@
       for the moment*/
 
   /*Styles Menu button when hovered*/
-  .navbar:hover .menu {
+  .menu:hover {
     background-color: #bd4b0e;
   }
 
   /* Makes the links visible when the menu is hovered.
      Connects the first menu (navbar a) to the first 
      link (link a)*/
-  .navbar.a:hover .link.a {
+   .navbar.A:hover .link.A {
     display:inline-block;
   }
 
+  /*
+  .menu.A:hover + .link.A {
+    display:inline-block;
+  }
+
+  .link.A:hover {
+    display:inline-block;
+  }
+  */
+
   /* Connects the second menu (navbar b) to the second
      link (link b)*/
-  .navbar.b:hover .link.b {
+  .navbar.B:hover .link.B {
     display:inline-block;
   }
 
   /* Connects the third menu (navbar c) to the second
      link (link c)*/
-     .navbar.c:hover .link.c {
+     .navbar.C:hover .link.C {
       display:inline-block;
     }
 
     /* Connects the fourth menu (navbar d) to the second
      link (link d)*/
-  .navbar.d:hover .link.d {
+  .navbar.D:hover .link.D {
     display:inline-block;
   }
  
@@ -154,18 +165,24 @@
     .column.left, .column.middle, .column.right {
       width: 100%;
     }
-    .navbar.a:hover .link.a {
-      display:block;
-    }
-    .navbar.b:hover .link.b {
-      display:block;
-    }
-       .navbar.c:hover .link.c {
+      .navbar.A:hover .link.A {
         display:block;
       }
-    .navbar.d:hover .link.d {
-      display:block;
-    }
+      .navbar.B:hover .link.B {
+        display:block;
+      }
+      .navbar.C:hover .link.C {
+        display:block;
+      }
+      .navbar.D:hover .link.D {
+        display:block;
+      }
+      
+      /*
+      .navbar{
+        display:none;
+      }
+      */
   }
 
   /* Styles the screen when the width is between 600 and 768px*/
@@ -178,18 +195,18 @@
     /* I think this will involve javaScript*/
     /* I have just discovered that CSS does this by default when using touchscreen
        instead of a cursor, so I am quite delighted*/
-    .navbar.a:hover .link.a {
-      display:block;
-    }
-    .navbar.b:hover .link.b {
-      display:block;
-    }
-       .navbar.c:hover .link.c {
+       .navbar.A:hover .link.A {
         display:block;
       }
-    .navbar.d:hover .link.d {
-      display:block;
-    }
+      .navbar.B:hover .link.B {
+        display:block;
+      }
+      .navbar.C:hover .link.C {
+        display:block;
+      }
+      .navbar.D:hover .link.D {
+        display:block;
+      }
   }
 
   /* Styles the screen when the width is between 768 and 992px*/
@@ -197,18 +214,18 @@
     .column.left{
       width:100%;
     }
-    .navbar.a:hover .link.a {
-      display:block;
-    }
-    .navbar.b:hover .link.b {
-      display:block;
-    }
-       .navbar.c:hover .link.c {
+      .navbar.A:hover .link.A {
         display:block;
       }
-    .navbar.d:hover .link.d {
-      display:block;
-    }
+      .navbar.B:hover .link.B {
+        display:block;
+      }
+      .navbar.C:hover .link.C {
+        display:block;
+      }
+      .navbar.D:hover .link.D {
+        display:block;
+      }
     .column.middle{
       width:75%;
     }
