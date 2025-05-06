@@ -3,11 +3,20 @@
     box-sizing: border-box;
   }
   
+  /*It's kind of ridiculous that I have to tell
+  the browser that I want the max width to be 100%. 
+  Surely that should be the default*/
   body {
     margin: 0;
     background-color:#80401e;
+    width:100%;
   }
   
+  /* Style the main content of the website*/
+  main{
+    background-color:#6793AC;
+   }
+
   /* Style the header */
   .header {
     background-color: #114AB1;
@@ -20,9 +29,8 @@
     color:black;
   }
 
-  /* Style the main content of the website*/
-  main{
-    background-color:#6793AC;
+  .navbutton {
+    display:none;
   }
 
   /* Create three unequal columns that float next to each other */
@@ -158,10 +166,12 @@
 
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   /* Styles the viewport (screen) whem the width is less than 600px */
+
+  /*
   @media screen and (max-width: 600px) {
     /*I want to try make this display:none for the menu links, and add
     a button to display it when it's pressed for small screens.
-    I think this will involve javaScript*/
+    I think this will involve javaScript*
     .column.left, .column.middle, .column.right {
       width: 100%;
     }
@@ -182,7 +192,82 @@
       .navbar{
         display:none;
       }
-      */
+      *
+  }
+  */
+
+  @media screen and (max-width: 600px) {
+    .column.left, .column.middle, .column.right {
+      width: 100%;
+    }
+
+    .column.left {
+      clear:both;
+    }
+    .navbar {
+      display:none;
+    }
+
+    .navbutton {
+      display:block;
+      border:none;
+      border-radius:3px;
+      background:none;
+      color:darkgray;
+      font-size:1.25em;
+      cursor:pointer;
+      padding:0px;
+      position:fixed;
+      top:0px;
+      right:0px;
+      padding-right:2%;
+    }
+
+    .nav{
+      position:fixed;
+      top:46px;
+      background-color:white;
+      width:100%;
+    }
+    .menu{
+      background-color:white;
+      border-bottom:black 1px solid;
+      font-weight: bold;
+    }
+    .link{
+      box-shadow:none;
+      a {
+        padding:8px;
+      }
+    }
+    .column.left:hover .navbar{
+      
+      
+      display:inline-block;
+      
+      
+      .link {
+        display:block;
+      }
+    }
+      
+
+    
+  /*
+      .navbar.A {
+        display:block;
+      }
+      .navbar.B:hover .link.B {
+        display:block;
+      }
+      .navbar.C:hover .link.C {
+        display:block;
+      }
+      .navbar.D:hover .link.D {
+        display:block;
+      }
+     */ 
+    
   }
 
   /* Styles the screen when the width is between 600 and 768px*/
